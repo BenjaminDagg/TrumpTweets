@@ -20,39 +20,6 @@ export class TweetsComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    /*
-    var encodedKey:string = encodeURI(this.apikey);
-    var encodedSecretKey:string = encodeURI(this.apiSecretKey);
-    var base64Key = encodedKey + ':' + encodedSecretKey;
-    var key = btoa(base64Key);
-    console.log('key = ' + key);
-    
-    
-    var headers = {headers: {'Authorization': 'Basic ' + key, 
-                             'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-                             'Access-Control-Allow-Origin': '*',
-                             'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
-                             'Access-Control-Allow-Credentials': true,
-                             'Access-Control-Allow-Headers': 'X-Requested-With,content-type'
-                             }};
-    this.http.post('https://api.twitter.com/oauth2/token',
-    headers).subscribe(data => {
-      console.log(data);
-    });
-    */
-    
-    /*
-    var headers = new Headers();
-    headers.append("Authorization", "Basic " + key);
-    headers.append("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
-    let body = '';
-    let options = {
-      headers: headers
-    };
-    this.http.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=100&screen_name=twitterapi',body,options).subscribe(data => {
-    
-    });
-     * */
     
       //call local server to get token
       var headers = new Headers();
