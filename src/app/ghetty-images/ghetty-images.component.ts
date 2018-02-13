@@ -13,10 +13,10 @@ export class GhettyImagesComponent implements OnInit {
   getTestSecretKey = 'vZVgUr7W5UBEtzQ3SyzVKE3AuRfRvN6Swcp8Ewjka6NAX';
   connectKey = '634j7nbv94yuukxty9d66cgb';
   connectSecretKey = 'cfGngDmVWpA7kbm6t6BVYFpYTT3GtfGKyPVVUj5TCjwpk';
+  
   // HTTP header for api request inserted with key
   config = {headers: {
       'Api-Key': this.gettyTestKey,
- 
     }
   };
   
@@ -40,15 +40,15 @@ export class GhettyImagesComponent implements OnInit {
       .subscribe(data => {
       //parse list of images to get a randomly selected image
       var images = data['images'];
-        
-      let randImg = Math.floor(Math.random() * (29 - 0 + 1)) + 0;
+      var size = images.length;  
+      let randImg = Math.floor(Math.random() * ((size - 1) - 0 + 1)) + 0;
       let img = images[randImg];
       
       //set image source to random image
       let url = img['display_sizes'][0]['uri'];
       this.url = url;
          
-      console.log(images);
+      console.log('size = ' + size);
     });
   }
 
