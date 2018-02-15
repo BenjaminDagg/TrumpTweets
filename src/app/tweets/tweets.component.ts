@@ -30,17 +30,22 @@ export class TweetsComponent implements OnInit {
 
         //call  with bearer token to get tweets
         this.http.post('http://localhost:3000/search', {headers: headers}).subscribe((data) => {
-          
+         
           //array of all tweets from users timeline
-          var tweets = data.data;
+          var tweets = data['data'];
+          console.log(tweets);
           var numTweets = tweets.length;
           
           //select random tweet
           let rand = Math.floor(Math.random() * ((numTweets - 1) - 0 + 1)) + 0;
           let randTweet = tweets[rand];
           
-          this.tweetText = randTweet['text'];
+          //get year of tweet
+          let date = randTweet['created_at'];
+          let year = date.substring(date.length - 4,date.length);
           
+          
+          this.tweetText = '"' + randTweet['full_text'].replace('RT','') + '" - Donald Trump, ' + year;
           console.log(this.tweetText);
            
           

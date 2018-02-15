@@ -6,7 +6,7 @@ import { GhettyImagesComponent } from './ghetty-images/ghetty-images.component';
 import { TweetsComponent } from './tweets/tweets.component';
 
 
-
+//put imported modules here
 @NgModule({
   declarations: [
     AppComponent,

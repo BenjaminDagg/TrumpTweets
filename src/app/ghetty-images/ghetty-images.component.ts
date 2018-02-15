@@ -53,3 +53,5 @@ export class GhettyImagesComponent implements OnInit {
   }
 
 }
+
+

@@ -52,7 +52,7 @@ function getTweets(req,res) {
 		var header = 'Bearer '  + bearertoken;
 		
 		//make api call with bearer token
-		request.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=30&screen_name=bestnewapps2015', {headers: {Authorization: header}}, function(error, body, response) {
+		request.get('https://api.twitter.com/1.1/statuses/user_timeline.json?count=30&tweet_mode=extended&screen_name=realdonaldtrump', {headers: {Authorization: header}}, function(error, body, response) {
 			if(error){
 				console.log(error);
 			}
@@ -74,4 +74,4 @@ app.post('/search', function(req,res) {
 	getTweets(req,res);
 })
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Server listening on port 3000'))
