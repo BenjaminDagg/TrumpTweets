@@ -1,5 +1,15 @@
-#container {
-	position: relative;
-	width: 80%;
+a {
+	margin-right: 20px;
+	font-size: 30px;
 }
 
+a:hover {
+	color:white;
+}
+
+nav {
+	margin-bottom: 30px;
+	background-color: #b6cbed;
+	width: 80%;
+	text-align: center;
+}
