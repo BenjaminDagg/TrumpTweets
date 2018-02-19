@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { LinksServiceService } from '../links-service.service';
 //import { RequestOptions } from '@angular/common/http';
 //import { RequestMethod } from '@angular/common/http';
 
@@ -15,9 +16,11 @@ export class TweetsComponent implements OnInit {
   apiSecretKey = 'Hsn80lHNgpsKXKvKnCojn1JJ29GuHXMVmo3CVpJLXjEFn97jKB';
   bearer = '';
   tweetText = '';
+  id: string;
+  tweetURL: string;
+  title = 'View Tweet';
 
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private linkService: LinksServiceService) { }
 
   ngOnInit() {
     
@@ -42,8 +45,12 @@ export class TweetsComponent implements OnInit {
           
           //get year of tweet
           let date = randTweet['created_at'];
-          let year = date.substring(date.length - 4,date.length);
+          let year = date.substring(date.length - 4, date.length);
           
+          //get tweet id
+          let id = randTweet['id_str'];
+          this.tweetURL = 'https://twitter.com/statuses/' + id;
+          console.log('id = ' + id);
           
           this.tweetText = '"' + randTweet['full_text'].replace('RT','') + '" - Donald Trump, ' + year;
           console.log(this.tweetText);

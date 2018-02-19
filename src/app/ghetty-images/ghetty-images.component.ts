@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { LinksServiceService } from '../links-service.service';
 
 @Component({
   selector: 'app-ghetty-images',
@@ -22,8 +23,9 @@ export class GhettyImagesComponent implements OnInit {
   
   //holds the target image url
   url: string;
+  title = 'View Image';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient ,private linkService: LinksServiceService) { }
   
 
   ngOnInit() {
@@ -47,6 +49,10 @@ export class GhettyImagesComponent implements OnInit {
       //set image source to random image
       let url = img['display_sizes'][0]['uri'];
       this.url = url;
+        
+      //send url to links service
+      console.log('pic url = ' + this.url);
+      this.linkService.setPicURL(url);
          
       console.log('size = ' + size);
     });
