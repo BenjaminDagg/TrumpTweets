@@ -1,15 +1,21 @@
 a {
 	margin-right: 20px;
 	font-size: 30px;
+	
 }
 
 a:hover {
-	color:white;
+	color: orange;
 }
 
 nav {
+	
 	margin-bottom: 30px;
-	background-color: #b6cbed;
-	width: 80%;
+	width: 100%;
+	height: 75px;
 	text-align: center;
+	background-image: url("./images/flag_banner.png");
+	opacity: 0.75;
+	padding-top: 30px;
+	
 }
