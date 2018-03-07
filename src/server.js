@@ -74,4 +74,8 @@ app.post('/search', function(req,res) {
 	getTweets(req,res);
 })
 
+app.get('/api/hello', function(req,res) {
+	res.send('hello')
+})
+
 app.listen(3000, () => console.log('Server listening on port 3000'))
