@@ -11,7 +11,7 @@ var request = require('request');
 
 var app = express();
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors());
+
 
 //keys
 var apikey = 'QBz1LovHvGVgZSyVRPCopquJR';
