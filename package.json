@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve | node main-server.js | node server.js",
+    "start": "node main-server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
