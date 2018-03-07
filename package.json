@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node main-server.js",
+    "start": "node ./src/main-server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,6 +13,8 @@
   },
   "private": true,
   "dependencies": {
+  	"@angular/cli": "1.6.5",
+    "@angular/compiler-cli": "^5.2.0",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
