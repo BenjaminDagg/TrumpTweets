@@ -32,7 +32,7 @@ export class TweetsComponent implements OnInit {
         
 
         //call  with bearer token to get tweets
-        this.http.post('https://warm-crag-97295.herokuapp.com/search', {headers: headers}).subscribe((data) => {
+        this.http.post('/search', {headers: headers}).subscribe((data) => {
          
           //array of all tweets from users timeline
           var tweets = data['data'];
