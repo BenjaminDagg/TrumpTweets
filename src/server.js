@@ -21,6 +21,10 @@ app.use(function(req, res, next) {
     next();
 });
 
+//Serve only the static files form the dist directory
+app.use(express.static(__dirname + '../dist'));
+
+
 //keys
 var apikey = 'QBz1LovHvGVgZSyVRPCopquJR';
 var apiSecretKey = 'Hsn80lHNgpsKXKvKnCojn1JJ29GuHXMVmo3CVpJLXjEFn97jKB';
@@ -86,4 +90,5 @@ app.get('/api/hello', function(req,res) {
 	res.send('hello')
 })
 
-app.listen(3000, () => console.log('Server listening on port 3000'))
+//Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080 ,() => console.log('server listening'));
