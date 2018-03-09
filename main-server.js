@@ -5,7 +5,11 @@
 //Install express server
 const express = require('express');
 const app = express();
-
+var bodyParser = require('body-parser');
+var cors = require('cors');
+var http = require('http');
+var fs = require('fs');
+var request = require('request');
 
 /**
  * 
