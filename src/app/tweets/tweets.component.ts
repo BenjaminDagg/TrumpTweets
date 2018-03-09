@@ -32,7 +32,7 @@ export class TweetsComponent implements OnInit {
         
 
         //call  with bearer token to get tweets
-        this.http.post('https://localhost/search', {headers: headers}).subscribe((data) => {
+        this.http.post('http://localhost/search', {headers: headers}).subscribe((data) => {
          
           //array of all tweets from users timeline
           var tweets = data['data'];

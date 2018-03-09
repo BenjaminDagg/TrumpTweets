@@ -10,6 +10,7 @@ var fs = require('fs');
 var request = require('request');
 
 var app = express();
+app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(function(req, res, next) {
