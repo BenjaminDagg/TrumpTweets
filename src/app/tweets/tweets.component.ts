@@ -27,12 +27,12 @@ export class TweetsComponent implements OnInit {
       //call local server to get token
       var headers = new Headers();
       headers.append('Content-Type', 'application/X-www-form-urlencoded');
-      this.http.post('http://localhost/authorize', {headers: headers}).subscribe((res) => {
+      this.http.post('http://localhost:8080/authorize', {headers: headers}).subscribe((res) => {
         console.log(res);
         
 
         //call  with bearer token to get tweets
-        this.http.post('http://localhost/search', {headers: headers}).subscribe((data) => {
+        this.http.post('http://localhost:8080/search', {headers: headers}).subscribe((data) => {
          
           //array of all tweets from users timeline
           var tweets = data['data'];
