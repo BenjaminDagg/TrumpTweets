@@ -1,4 +1,4 @@
-# Trump Twees
+# Trump Tweets
 
 This app uses Getty Images API and Twitter API to retrieve a random recent tweet from Donald Trump and display it over a random picture of Donald Trump retrieved from Getty Images. I use a NodeJS server as a proxy for my client to call and make a Twitter API call on its behalf to get around CORS issues.
 
