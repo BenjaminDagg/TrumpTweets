@@ -13,7 +13,7 @@
   },
   "private": true,
   "dependencies": {
-  	"@angular/cli": "1.6.5",
+    "@angular/cli": "1.6.5",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -31,7 +31,6 @@
     "twitter-node-client": "0.0.6",
     "zone.js": "^0.8.19",
     "typescript": "~2.5.3",
-    
     "body-parser": "^1.18.2",
     "codelyzer": "^4.0.1",
     "cors": "^2.8.4",
@@ -74,7 +73,7 @@
     "typescript": "~2.5.3"
   },
   "engines": {
-  	"node": "9.4.0",
-  	"npm": "5.6.0"
+    "node": "9.4.0",
+    "npm": "5.6.0"
   }
 }

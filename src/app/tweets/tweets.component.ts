@@ -27,17 +27,16 @@ export class TweetsComponent implements OnInit {
       //call local server to get token
       var headers = new Headers();
       headers.append('Content-Type', 'application/X-www-form-urlencoded');
-      this.http.post('/authorize', {headers: headers}).subscribe((res) => {
+      this.http.get('https://homework4-bdagg.herokuapp.com/tweets').subscribe((res) => {
         console.log(res);
         
-
-        //call  with bearer token to get tweets
-        this.http.post('/search', {headers: headers}).subscribe((data) => {
-         
-          //array of all tweets from users timeline
-          var tweets = data['data'];
-          console.log(tweets);
-          var numTweets = tweets.length;
+         var tweets = res;
+         var size = 0;
+         for (var key in res) {
+           size++;
+         }
+        
+          var numTweets = size
           
           //select random tweet
           let rand = Math.floor(Math.random() * ((numTweets - 1) - 0 + 1)) + 0;
@@ -57,9 +56,9 @@ export class TweetsComponent implements OnInit {
            
           
         });
-      });
+      
     }
-  }
+}
   
   
 

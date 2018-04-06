@@ -37,9 +37,11 @@ export class GhettyImagesComponent implements OnInit {
   // get array image results from getty api
   getImage() {
     // call getty images api and get list of images
-    this.http.get('https://api.gettyimages.com/v3/search/images?fields=id,title,comp,referral_destinations&sort_order=best&phrase=trump'
-      , this.config)
+    this.http.get('https://homework4-bdagg.herokuapp.com/trump')
       .subscribe(data => {
+      
+      //console.log(data);
+        
       //parse list of images to get a randomly selected image
       var images = data['images'];
       var size = images.length;  
@@ -54,7 +56,7 @@ export class GhettyImagesComponent implements OnInit {
       console.log('pic url = ' + this.url);
       this.linkService.setPicURL(url);
          
-      console.log('size = ' + size);
+      //console.log('size = ' + size);
     });
   }
 
