@@ -29,7 +29,7 @@ No known bugs. If a tweet is deleted by the tweet poster then the 'view tweet' b
 
 ## Heroku
 
-[Heroku deployment link](https://rocky-forest-69538.herokuapp.com/)
+[Heroku deployment link](https://trump-tweets-bdagg.herokuapp.com/)
 
 ## Eclipse Generated README
 ### Compile insructions
