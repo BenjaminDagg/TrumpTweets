@@ -40,7 +40,7 @@ export class GhettyImagesComponent implements OnInit {
     this.http.get('https://homework4-bdagg.herokuapp.com/trump')
       .subscribe(data => {
       
-      //console.log(data);
+      console.log(data);
         
       //parse list of images to get a randomly selected image
       var images = data['images'];
