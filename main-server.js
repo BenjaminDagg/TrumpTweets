@@ -11,17 +11,6 @@ var http = require('http');
 var fs = require('fs');
 var request = require('request');
 
-/**
- * 
- */
-
-
-var bodyParser = require('body-parser');
-var cors = require('cors');
-var http = require('http');
-var fs = require('fs');
-var request = require('request');
-
 app.use(cors({credentials: true, origin:true}));
 app.use(bodyParser.urlencoded({extended:true}));
 
